@@ -1,0 +1,29 @@
+﻿@model Leave_Management.Models.LeaveTypeVM
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details Leave Type</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.DefaultDays)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.DefaultDays)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" asp-action="Create" asp-route-id="@Model.Id">Edit</a>
+    <a class="btn btn-outline-primary" asp-action="Index">Back to List</a>
+</div>
